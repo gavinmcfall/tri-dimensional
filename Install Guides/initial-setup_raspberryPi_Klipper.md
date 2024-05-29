@@ -51,7 +51,8 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
 
 1. click on `printer.cfg`
 1. In the editor that shows up. Clear out everything except for these bits:
-    ```[include mainsail.cfg]
+    ```
+    [include mainsail.cfg]
 
     [virtual_sdcard]
     path: /home/nerdzadmin/printer_data/gcodes
