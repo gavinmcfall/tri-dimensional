@@ -46,3 +46,4 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
 1. you should see sommething like: 
 ```ls /dev/serial/by-id/*
 /dev/serial/by-id/usb-Klipper_stm32f103xe_33FFD5055641343404761743-if00```
+1. Next
