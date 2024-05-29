@@ -49,3 +49,14 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
 1. Next navigate to the IP address of the PI (the one you setup when you gave it a fixed IT) and you should see mainsail (The Klipper web interface)
     ![mailsail web interface image](images/mainsail_01.png)
 
+1. click on `printer.cfg`
+1. In the editor that shows up. Clear out everything except for these bits:
+    ```[include mainsail.cfg]
+
+[virtual_sdcard]
+path: /home/nerdzadmin/printer_data/gcodes
+on_error_gcode: CANCEL_PRINT```
+1. Then copy the entirety of this file and paste it into the `printer.cfg` belwo the `[virtual_sdcard]` section:
+    1. https://github.com/Klipper3d/klipper/blob/master/config/generic-bigtreetech-skr-mini-e3-v2.0.cfg
+1. Next confirm where your CRTouch is connected to the motherboard. It should be here:
+    ![motherboard pinout](images/btt_skr_mini_e3_v2.0_pinout_crtouch-location.png)
