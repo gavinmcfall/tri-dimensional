@@ -46,4 +46,6 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
 1. you should see sommething like: 
     ```ls /dev/serial/by-id/*
     /dev/serial/by-id/usb-Klipper_stm32f103xe_33FFD5055641343404761743-if00```
-1. Next
+1. Next navigate to the IP address of the PI (the one you setup when you gave it a fixed IT) and you should see mainsail (The Klipper web interface)
+    ![mailsail web interface image](images/mainsail_01.png)
+
