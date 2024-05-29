@@ -1,3 +1,7 @@
+<!--
+Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
+-->
+
 # Install Setup of Raspberry Pi
 
 1. Use Raspberry Pi imager to build an image
