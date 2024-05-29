@@ -56,7 +56,7 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
 
     [virtual_sdcard]
     path: /home/nerdzadmin/printer_data/gcodes
-    on_error_gcode: CANCEL_PRINT```
+    on_error_gcode: CANCEL_PRINT
 1. Then copy the entirety of this file and paste it into the `printer.cfg` belwo the `[virtual_sdcard]` section:
     1. https://github.com/Klipper3d/klipper/blob/master/config/generic-bigtreetech-skr-mini-e3-v2.0.cfg
 1. Next confirm where your CRTouch is connected to the motherboard. It should be here:
