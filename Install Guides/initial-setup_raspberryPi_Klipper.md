@@ -35,3 +35,14 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
 1. Once configured, quit and save
 1. Run `make`
 1. Once complete, connect to the Pi using WinSCP and copy `/klipper/out/klipper.bin` to a local director on your PC
+1. Rename the `klipper.bin` to `firmware.bin` and copy onto a SD/MicroSD
+1. Ensure the Printer is off
+1. Insert the SSD/MircoSD into the printers motherboard and power on
+1. Wait 5 minutes
+1. Turn off the printer and remove teh SD/MicroSD
+1. Turn the Printer back on
+1. Connect the PI to the printer using a USB Cable
+1. SSH into the Pi and run the following: `ls /dev/serial/by-id/*`
+1. you should see sommething like: 
+```ls /dev/serial/by-id/*
+/dev/serial/by-id/usb-Klipper_stm32f103xe_33FFD5055641343404761743-if00```
