@@ -61,3 +61,39 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
     1. https://github.com/Klipper3d/klipper/blob/master/config/generic-bigtreetech-skr-mini-e3-v2.0.cfg
 1. Next confirm where your CRTouch is connected to the motherboard. It should be here:
     ![motherboard pinout](images/btt_skr_mini_e3_v2.0_pinout_crtouch-location.png)
+1. If it is then move on
+1. add some more data to the `printer.cfg`
+1. Undser `[stepper_z]` add the following line:
+    1. `endstop_pin: probe:z_virtual_endstop`
+1. Remove the following line:
+    1. position_endstop: 0.0
+1. Add the following to the bottom of the file:
+    ```
+    [bltouch]
+    sensor_pin: ^PC4
+    control_pin: PA4
+    x_offset: 48.0
+    y_offset: -2.0
+    z_offset: 2.92
+    pin_move_time: 0.4
+    speed: 20
+
+    [bed_mesh]
+    speed: 120
+    horizontal_move_z: 5
+    min_point: 0,42
+    max_point: 150,197
+    mesh_min: 35, 6
+    mesh_max: 240,198
+    probe_count: 3,3
+    algorithm: bicubic
+
+
+    [homing_override]
+    gcode:
+        G1 Z10 F1200 
+        G28 X Y
+        G1 X70 Y120 F3000
+        G28 Z
+    set_position_z: 0.0
+1. Next
