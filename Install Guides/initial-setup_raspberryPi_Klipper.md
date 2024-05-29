@@ -81,8 +81,6 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
     [bed_mesh]
     speed: 120
     horizontal_move_z: 5
-    min_point: 0,42
-    max_point: 150,197
     mesh_min: 35, 6
     mesh_max: 240,198
     probe_count: 3,3
@@ -96,4 +94,7 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
         G1 X70 Y120 F3000
         G28 Z
     set_position_z: 0.0
+1. Next click `Save a restart`
+1. Assuming you configured everything correctly you should see no errors and instead see a section that looks like this:
+    ![mailsail web interface image](images/mainsail_02.png)
 1. Next
