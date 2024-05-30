@@ -52,44 +52,13 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
 1. click on `printer.cfg`
 1. In the editor that shows up. Clear out everything
 1. Then copy the entirety of this file and paste it into the `printer.cfg`:
-    1. https://github.com/Klipper3d/klipper/blob/master/config/generic-bigtreetech-skr-mini-e3-v2.0.cfg
+    1. https://github.com/gavinmcfall/tri-dimensional/blob/a5e94ba70acb7477d92b857ecf05d87e4654fe83/Install%20Guides/Printer%20Files/Ender%203/Latest/printer.cfg
+1. Next click `Save a restart`
 1. Next confirm where your CRTouch is connected to the motherboard. It should be here:
     ![motherboard pinout](images/btt_skr_mini_e3_v2.0_pinout_crtouch-location.png)
 1. If it is then move on
-1. add some more data to the `printer.cfg`
-1. Undser `[stepper_z]` add the following line:
-    1. `endstop_pin: probe:z_virtual_endstop`
-1. Remove the following line:
-    1. position_endstop: 0.0
-1. Add the following to the bottom of the file:
-    ```
-    [bltouch]
-    sensor_pin: ^PC13
-    control_pin: PA1
-    x_offset: 48.0
-    y_offset: -2.0
-    z_offset: 2.92
-    pin_move_time: 0.4
-    speed: 20
-
-    [bed_mesh]
-    speed: 120
-    horizontal_move_z: 5
-    mesh_min: 35, 6
-    mesh_max: 240,198
-    probe_count: 3,3
-    algorithm: bicubic
-
-
-    [homing_override]
-    gcode:
-        G1 Z10 F1200 
-        G28 X Y
-        G1 X115 Y115 F3000
-        G28 Z
-    set_position_z: 0.0
-1. Next click `Save a restart`
 1. Assuming you configured everything correctly you should see no errors and instead see a section that looks like this:
     ![mailsail web interface image](images/mainsail_02.png)
 1. Next click on `Dashboard` in the left menu and under Toolhead Click: :house: All
-1. The toolhead should move to approx center
+1. The toolhead should move to approx center on the build plate
+1. You are now ready to print
