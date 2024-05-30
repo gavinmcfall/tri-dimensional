@@ -70,8 +70,8 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
 1. Add the following to the bottom of the file:
     ```
     [bltouch]
-    sensor_pin: ^PC4
-    control_pin: PA4
+    sensor_pin: ^PC13
+    control_pin: PA1
     x_offset: 48.0
     y_offset: -2.0
     z_offset: 2.92
@@ -91,10 +91,11 @@ Markdown reference: https://www.markdownguide.org/basic-syntax/#ordered-lists
     gcode:
         G1 Z10 F1200 
         G28 X Y
-        G1 X70 Y120 F3000
+        G1 X115 Y115 F3000
         G28 Z
     set_position_z: 0.0
 1. Next click `Save a restart`
 1. Assuming you configured everything correctly you should see no errors and instead see a section that looks like this:
     ![mailsail web interface image](images/mainsail_02.png)
-1. Next
+1. Next click on `Dashboard` in the left menu and under Toolhead Click: :house: All
+1. The toolhead should move to approx center
